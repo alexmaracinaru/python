@@ -19,9 +19,19 @@ people = [
 ]
 
 trends = [
-    {"top": "Music", "title": "We Won", "bottom": "135K Tweets"},
-    {"top": "Pop", "title": "Blue Ivy", "bottom": "40k tweets"},
-    {"top": "Trending in US", "title": "Denim Day", "bottom": "40k tweets"},
+    {"top": "Music", "title": "We Won", "tweets_counter": "20k"},
+    {"top": "Pop", "title": "Blue Ivy", "tweets_counter": "20k"},
+    {"top": "Trending in US", "title": "Denim Day", "tweets_counter": "20k"},
+    {"top": "Russia", "title": "Russia", "tweets_counter": "20k"},
+    {"top": "Ukraine", "title": "Ukraine", "tweets_counter": "20k"},
+
+]
+
+items = [
+    {"img": "peterson.jpg", "title": "Dr. Jordan B Peterson",
+        "username": "jordanbpeterson"},
+    {"img": "shapiro.jpg", "title": "Ben Shapiro", "username": "benshapiro"},
+    {"img": "babylonbee.jpg", "title": "The Babylon Bee", "username": "babylonbee"}
 ]
 
 tweets = [
@@ -51,6 +61,7 @@ tweets = [
      "date": "Mar 7", "text": "Last year has been the best year for manufacturing jobs and trucking jobs since 1994."},
 ]
 
+
 ##############################
 
 
@@ -71,7 +82,7 @@ def _(image_name):
 @get("/")
 @view("index")
 def _():
-    return dict(tabs=tabs, tweets=tweets)
+    return dict(tabs=tabs, tweets=tweets, trends=trends, items=items)
 
 
 ##############################
